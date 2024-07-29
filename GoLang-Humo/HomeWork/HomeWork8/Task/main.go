@@ -90,7 +90,7 @@ func main() {
 		arr3 = append(arr3, c)
 	}
 	fmt.Println("Наш массив: ", arr3)
-	fmt.Println(podArr(arr3))
+	fmt.Println("Длина самого длиного подмасива, в котором все элементы различны равен: ", podArr(arr3))
 }
 
 // 1Найти максимальный элемент в массиве.
@@ -341,11 +341,10 @@ func podArr(arr []int) int {
 		}
 		if l > max {
 			max = l
-			fmt.Println(max)
 		}
 
 	}
-	return max
+	return max + 1
 }
 
 //21Найти все подмассивы, сумма которых равна заданному числу.
