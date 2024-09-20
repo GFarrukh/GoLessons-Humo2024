@@ -5,7 +5,6 @@ import (
 	"gorm.io/gorm/clause"
 	"log"
 	"pharmacy-system/internal/model"
-	//"pharmacy-system/internal/model"
 )
 
 func (r *Repository) AddUser(u *model.User) (*model.User, error) {

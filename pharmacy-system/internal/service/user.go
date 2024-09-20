@@ -3,9 +3,9 @@ package service
 import (
 	"errors"
 	"fmt"
-	"pharmacy-system/internal/model"
-	//"pharmacy-system/internal/utils"
 	"log"
+	"pharmacy-system/internal/model"
+	"pharmacy-system/internal/utils"
 )
 
 // CreateUser функция, которая добавляет пользователя в репозиторий.

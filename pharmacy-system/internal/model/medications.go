@@ -22,14 +22,29 @@ type Reviews struct {
 	ReviewDate   *time.Time `json:"Review_date,omitempty"`
 }
 
+type Borrow struct {
+	BorrowID     int        `json:"borrow_id" gorm:"primaryKey"`
+	UserID       int        `json:"UserID"`
+	MedicationID int        `json:"MedicationID"`
+	BorrowDate   *time.Time `json:"borrow_date,omitempty"`
+	ReturnDate   *time.Time `json:"return_date,omitempty"`
+}
+
+type BorrowHistory struct {
+	HistoryID  int        `json:"history_id" gorm:"primaryKey"`
+	BorrowID   int        `json:"borrow_id"`
+	ActionType string     `json:"action_type"`
+	ActionDate *time.Time `json:"action_date,omitempty"`
+}
+
 type ReviewFilter struct {
-	ReviewID    int
-	BookID      int
-	UserID      int
-	CountOnPage int
-	Page        int
-	DateFrom    *time.Time
-	DateTo      *time.Time
+	ReviewID     int
+	MedicationID int
+	UserID       int
+	CountOnPage  int
+	Page         int
+	DateFrom     *time.Time
+	DateTo       *time.Time
 }
 
 // ValidateReviewFilter проверяет корректность значений фильтра

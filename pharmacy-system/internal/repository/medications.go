@@ -43,7 +43,7 @@ func (r *Repository) GetMedicationByID(MedicationID int) (*model.Medications, er
 	return &m, nil
 }
 
-func (r *Repository) GetMedicationByAuthor(ManufacturerID int) ([]model.Medications, error) {
+func (r *Repository) GetMedicationByManufacturer(ManufacturerID int) ([]model.Medications, error) {
 	var m []model.Medications
 
 	// select * from Medication where ManufacturerID = ManufacturerID

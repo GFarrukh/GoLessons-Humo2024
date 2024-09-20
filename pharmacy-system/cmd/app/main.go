@@ -5,10 +5,10 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"internal/repository"
-	"internal/service"
 	"log"
 	"net/http"
+	"pharmacy-system/internal/repository"
+	"pharmacy-system/internal/service"
 )
 
 func main() {
