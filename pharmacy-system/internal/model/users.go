@@ -10,9 +10,9 @@ import (
 
 // User структура для пользователя.
 type User struct {
-	UserID   int    `json:"UserID" gorm:"primaryKey"`
-	UserName string `json:"userName"`
-	Password string `json:"Password,omitempty"`
+	UserID   int    `json:"user_id" gorm:"primaryKey"`
+	UserName string `json:"username"`
+	Password string `json:"password,omitempty"`
 	//HasProfile bool
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`

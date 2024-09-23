@@ -6,9 +6,9 @@ import (
 )
 
 type Medications struct {
-	MedicationID   int        `json:"MedicationID,omitempty" gorm:"primaryKey"` //ID лекарств
-	NameMedication string     `json:"NameMedication,omitempty"`                 //Название лекарств
-	ManufacturerID int        `json:"ManufacturerID,omitempty"`                 //ID Инструкции
+	MedicationID   int        `json:"medication_id,omitempty" gorm:"primaryKey"` //ID лекарств
+	NameMedication string     `json:"name_medication,omitempty"`                 //Название лекарств
+	ManufacturerID int        `json:"manufacturer_id,omitempty"`                 //ID Инструкции
 	CreatedAt      *time.Time `json:"created_at,omitempty"`
 	UpdatedAt      *time.Time `json:"updated_at,omitempty"`
 }
